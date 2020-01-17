@@ -1,0 +1,79 @@
+@import "../../index.scss";
+.tour {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  margin: 1rem;
+
+  background-color: $mainGray;
+}
+@media screen and (max-width: 768px) {
+  .tour {
+    grid-template-columns: 1fr;
+  }
+}
+.tour__description {
+  margin: 1rem;
+}
+.tour__img-container {
+  position: relative;
+  height: 100%;
+  min-width: 300px;
+}
+.tour__img {
+  width: 100%;
+  max-width: 450px;
+  display: block;
+}
+.tour__img:hover + .tour__icon-delete {
+  opacity: 1;
+}
+.tour__icon-delete {
+  cursor: pointer;
+  font-size: 2rem;
+  color: rebeccapurple;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+.tour__icon-delete:hover {
+  opacity: 1;
+}
+.tour__city {
+  color: $mainGreen;
+  text-transform: uppercase;
+}
+.tour__name {
+  margin: 0.5rem 0 0 0;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+.tour__info-box {
+  padding: 1rem 0;
+}
+.tour__info-line {
+  display: flex;
+  flex-direction: row;
+}
+.tour__info-label {
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  margin: 0 1rem 0 0;
+}
+.tour__icon-info {
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: $mainGreen;
+  color: $mainWhite;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+}
+.tour__info-text {
+  font-style: italic;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+}
